@@ -1,25 +1,24 @@
-import { older } from "../assets";
-import { IoPlayCircle, IoPlanet } from "react-icons/io5";
+import { BsPlayCircleFill } from "react-icons/bs";
+
 
 const MusicCard = (props) => {
-  return(
-
-    <div className=" max-w-[250px]  height-auto bg-purple-900 px-5 pt-5 pb-2  rounded-md shadow-lg">
-      <img src = {older} alt="older" className=" bg-transparent"/>
-      
-      <div className="flex justify-evenly items-center bg-transparent drop-shadow">
-        <h2 className=" p-0 text-gray-400"> 
-        {props.releaseDate} 
-        <br />
-        {props.type}
-        </h2>
-        <strong className=" justify-center text-primary">{props.title}</strong>
-        <IoPlayCircle className="bg-transparent scale-150   " />
-        </div>
-        
-      
-    </div>
-
-  )
+	return(
+		<div className="bg-gray-900 shadow-xl rounded p-3">
+			<div className="group relative">
+				<img className="w-full md:w-72 block rounded" src={props.image} alt="" />
+				<div className="absolute bg-black rounded bg-opacity-0 group-hover:bg-opacity-60 w-full h-full top-0 flex items-center group-hover:opacity-100 transition justify-evenly">
+					<button className="hover:scale-110 text-white opacity-0 transform translate-y-3 group-hover:translate-y-0 group-hover:opacity-100 transition">
+						<BsPlayCircleFill />
+					</button>
+				</div>
+			</div>
+		<div className="p-5 bg-transparent">
+			<h3 className="text-white drop-shadow-sm text-lg bg-inherit">{props.title}</h3>
+			<p className="text-gray-400 bg-inherit">{props.type} • {props.releaseDate} </p>
+		</div>
+		</div>
+	)
 }
+
+
 export default MusicCard;

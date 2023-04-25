@@ -1,20 +1,17 @@
-import { useState } from 'react'
+
 import './index.css'
-import MusicCard from './components/music-card'
+import Music from './components/music'
+import Footers from './components/footer'
 
 
 
-function App() {
+const App =() => {
 
 
   return (
     <>
-      <h1>Hello</h1>
-      <MusicCard
-        title="Older"
-        releaseDate="2022"
-        type="Single"
-      />
+			<Music />
+
     </>
   )
 }
