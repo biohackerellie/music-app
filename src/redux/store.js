@@ -1,4 +1,10 @@
-import { configureStore, createSlice } from '@reduxjs/toolkit';
+import { configureStore, createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+
+export const fetchSongs = createAsyncThunk('songs/fetchSongs', async () => {
+	const response = await fetch('http://localhost:3001/songs');
+	const songData = await response.json();
+	return songData;
+}')
 
 const musicPlayerSlice = createSlice({
   name: 'musicPlayer',
