@@ -1,0 +1,29 @@
+[
+	{
+		"id": 1,
+		"title": "Makin it Up",
+		"artist": "Ellie Kerns",
+		"album": "Single",
+		"image": "./public/images/makin.jpg",
+		"audioFile": "./public/audio/makin.mp3",
+		"releaseDate": "2023"
+	},
+	{
+		"id": 2,
+		"title": "Getting Older",
+		"artist": "Ellie Kerns",
+		"album": "Single",
+		"image": "./public/images/older.jpg",
+		"audioFile": "./public/audio/older.mp3",
+		"releaseDate": "2022"
+	},
+	{
+		"id": 3,
+		"title": "In Your Arms",
+		"artist": "Ellie Kerns",
+		"album": "Songs in My Head",
+		"image": "./public/images/SIMH.jpg",
+		"audioFile": "./public/audio/IYA.mp3",
+		"releaseDate": "2022"
+	}	
+]

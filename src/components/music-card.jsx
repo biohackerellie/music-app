@@ -28,8 +28,8 @@ const MusicCard = ({ song }) => {
 				</div>
 			</div>
 		<div className="p-5 bg-transparent">
-			<h3 className="text-white drop-shadow-sm text-lg bg-inherit">{props.title}</h3>
-			<p className="text-gray-400 bg-inherit">{props.type} • {props.releaseDate} </p>
+			<h3 className="text-white drop-shadow-sm text-lg bg-inherit">{song.title}</h3>
+			<p className="text-gray-400 bg-inherit">{song.artist} • {song.releaseDate} </p>
 		</div>
 		</div>
 	)
