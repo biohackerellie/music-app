@@ -39,7 +39,7 @@ app.get('/api/songs', (req, res) => {
 });
 
 
-app.use('/songs/audio', express.static('/audio'));
+app.use('/songs/audio', express.static('public/audio'));
 app.use('/songs/images', express.static('public/images'));
 
 app.listen(port, () => {

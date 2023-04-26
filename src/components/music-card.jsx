@@ -21,7 +21,7 @@ const MusicCard = ({ song }) => {
 					<button 
 						className="hover:scale-110 text-white opacity-0 transform translate-y-3 
 							group-hover:translate-y-0 group-hover:opacity-100 transition"
-						onClick={handlePlay}
+						onClick={handlePlay} //!BUG: When Clicking on the button, the song doesnt play
 							>
 						<BsPlayCircleFill scale={50} />
 					</button>

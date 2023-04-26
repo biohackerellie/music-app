@@ -1,4 +1,5 @@
 import { configureStore, createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import { useEffect } from 'react';
 
 export const fetchSongs = createAsyncThunk('songs/fetchSongs', async () => {
   const response = await fetch('http://localhost:3001/api/songs');
@@ -11,6 +12,9 @@ export const fetchSongs = createAsyncThunk('songs/fetchSongs', async () => {
 });
 
 console.log(fetchSongs)
+
+
+
 
 const songsSlice = createSlice({
 	name: 'songs',
@@ -38,6 +42,8 @@ const songsSlice = createSlice({
 
 
 const musicPlayerSlice = createSlice({
+	
+
   name: 'musicPlayer',
   initialState: {
     currentSong: null,
@@ -47,10 +53,13 @@ const musicPlayerSlice = createSlice({
     setCurrentSong: (state, action) => {
       state.currentSong = action.payload;
     },
-    togglePlaying: (state) => {
+    togglePlaying: (state, play) => {
       state.isPlaying = !state.isPlaying;
+			
     },
+
   },
+
 });
 
 export const { setCurrentSong, togglePlaying } = musicPlayerSlice.actions;
