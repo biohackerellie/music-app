@@ -1,10 +1,35 @@
 import { configureStore, createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 export const fetchSongs = createAsyncThunk('songs/fetchSongs', async () => {
-	const response = await fetch('http://localhost:3001/songs');
+	const response = await fetch('/api/songs');
 	const songData = await response.json();
 	return songData;
-}')
+});
+
+const songsSlice = createSlice({
+	name: 'songs',
+	initialState: {
+		list: [],
+		status: 'idle',
+		error: null,
+	},
+	reducers: {},
+	extraReducers: (builder) => {
+		builder
+			.addCase(fetchSongs.pending, (state) => {
+				state.status = 'loading';
+			})
+			.addCase(fetchSongs.fulfilled, (state, action) => {
+				state.status = 'succeeded';
+				state.list = action.payload;
+			})
+			.addCase(fetchSongs.rejected, (state, action) => {
+				state.status = 'failed';
+				state.error = action.error.message;
+			});
+	},
+});
+
 
 const musicPlayerSlice = createSlice({
   name: 'musicPlayer',
@@ -26,7 +51,10 @@ export const { setCurrentSong, togglePlaying } = musicPlayerSlice.actions;
 
 
 const store = configureStore({
-  reducer: musicPlayerSlice.reducer,
+  reducer: {
+		songs: songsSlice.reducer,
+		musicPlayer: musicPlayerSlice.reducer,
+	},
 });
 
 export default store;
