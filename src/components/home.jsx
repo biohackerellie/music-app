@@ -1,16 +1,34 @@
 import MusicCard from "./music-card";
-import { older } from "../assets/index";
+import { useSelector, useDispatch } from "react-redux";
+import { fetchSongs } from "../redux/store";
+
+import { useEffect } from "react";
 
 const Home = () => {
+	const dispatch = useDispatch();
+	const songs = useSelector((state) => state.songs.list);
+	const status = useSelector((state) => state.songs.status);
+	const error = useSelector((state) => state.songs.error);
+
+	useEffect(() => {
+		if (status === "idle") {
+			dispatch(fetchSongs());
+		}
+	}, [status, dispatch]);
+	
+	if (status === "loading") {
+		return <div>Loading...</div>;
+	}
+	if (status === "failed") {
+		return <div>{error}</div>;
+	}
+
 	return(
 		<main className="grid place-items-center min-h-screen " >
 		<section className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-		<MusicCard
-			image={older}
-			title="Older"
-			releaseDate="2022"
-			type="Single"			
-		/>
+			{songs.map((song) => (
+				<MusicCard key={song.id} song={song} />
+			))}
 		</section>
 	</main>
 	)

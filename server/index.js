@@ -7,6 +7,7 @@ const path = require('path');
 const app = express();
 const port = process.env.PORT || 3001;
 
+app.use(express.json());
 app.use(cors());
 
 const db = new sqlite3.Database(':memory:')
@@ -16,7 +17,7 @@ db.serialize(() => {
 		`CREATE TABLE songs (id INTEGER PRIMARY KEY, title TEXT, artist TEXT, album TEXT, image TEXT, audioFile TEXT, releaseDate TEXT)`
 	);
 	
-	const songs = JSON.parse(fs.readeFileSync(path.join(__dirname, 'songs.json')));
+	const songs = JSON.parse(fs.readFileSync(path.join(__dirname, 'songs.json')));
 	
 	const stmt = db.prepare('INSERT INTO songs VALUES (?, ?, ?, ?, ?, ?, ?)');
 	songs.forEach((song) => {
@@ -25,18 +26,21 @@ db.serialize(() => {
 	stmt.finalize();
 });
 
-app.get('/songs', (req, res) => {
-	db.all('SELECT * FROM songs', (err, rows) => {
-		if (err) {
-			res.status(500).json({ error: err.message });		
-		} else {
-			res.status(200).json(rows);
-		}
-	});
+app.get('/api/songs', (req, res) => {
+	
+  db.all('SELECT * FROM songs', (err, rows) => {
+    if (err) {
+      res.status(500).json({ error: err.message });		
+    } else {
+      res.status(200).json(rows);
+    }
+	console.log (rows)
+  });
 });
 
-app.use('/audio', express.static('public/audio'));
-app.use('/images', express.static('public/images'));
+
+app.use('/songs/audio', express.static('/audio'));
+app.use('/songs/images', express.static('public/images'));
 
 app.listen(port, () => {
 	console.log(`Server running on port ${port}`);
