@@ -48,6 +48,9 @@ const musicPlayerSlice = createSlice({
   initialState: {
     currentSong: null,
     isPlaying: false,
+		currentTime: 0,
+		duration: 0,
+		volume: 0.5,
   },
   reducers: {
     setCurrentSong: (state, action) => {
@@ -56,12 +59,21 @@ const musicPlayerSlice = createSlice({
     togglePlaying: (state, play) => {
       state.isPlaying = !state.isPlaying;			
     },
+		setCurrentTime: (state, action) => {
+			state.currentTime = action.payload;
+		},
+		setDuration: (state, action) => {
+			state.duration = action.payload;
+		},
+		setVolume: (state, action) => {
+			state.volume = action.payload;
+		}
 
   },
 
 });
 
-export const { setCurrentSong, togglePlaying } = musicPlayerSlice.actions;
+export const { setCurrentSong, togglePlaying, setCurrentTime, setDuration, setVolume } = musicPlayerSlice.actions;
 
 
 const store = configureStore({

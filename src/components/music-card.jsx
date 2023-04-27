@@ -11,7 +11,8 @@ const MusicCard = ({ song }) => {
   const handlePlay = () => {
 		if (currentSong && currentSong.id === song.id) {
 			dispatch(togglePlaying());
-		} else {
+		} 
+		else {
     dispatch(setCurrentSong(song));
     dispatch(togglePlaying());
   }
