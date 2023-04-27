@@ -19,6 +19,24 @@
 	},
 	{
 		"id": 3,
+		"title": "Willow",
+		"artist": "Ellie Kerns",
+		"album": "Single",
+		"image": "images/willow.jpg",
+		"audioFile": "audio/willow.wav",
+		"releaseDate": "2022"
+	},
+	{
+		"id": 5,
+		"title": "Jordan Peterson",
+		"artist": "Ellie Kerns",
+		"album": "Single",
+		"image": "images/peterson.png",
+		"audioFile": "audio/peterson.wav",
+		"releaseDate": "2022"
+	},
+	{
+		"id": 6,
 		"title": "In Your Arms",
 		"artist": "Ellie Kerns",
 		"album": "Songs in My Head",
@@ -26,4 +44,5 @@
 		"audioFile": "audio/IYA.mp3",
 		"releaseDate": "2022"
 	}	
+
 ]
