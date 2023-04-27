@@ -37,12 +37,128 @@
 	},
 	{
 		"id": 6,
+		"title": "Songs in My Head",
+		"artist": "Ellie Kerns",
+		"album": "Songs in My Head",
+		"image": "images/SIMH.jpg",
+		"audioFile": "audio/Songs-in-my-Head.wav",
+		"releaseDate": "2022"
+	},
+	{
+		"id": 7,
+		"title": "You Were Never Mine",
+		"artist": "Ellie Kerns",
+		"album": "Songs in My Head",
+		"image": "images/SIMH.jpg",
+		"audioFile": "audio/You-Were-Never-Mine.wav",
+		"releaseDate": "2022"
+	},
+	{
+		"id": 8,
+		"title": "Midnight",
+		"artist": "Ellie Kerns",
+		"album": "Songs in My Head",
+		"image": "images/SIMH.jpg",
+		"audioFile": "audio/Midnight.wav",
+		"releaseDate": "2022"
+	},
+	{
+		"id": 9,
+		"title": "This is Us",
+		"artist": "Ellie Kerns ft May Zoean",
+		"album": "Songs in My Head",
+		"image": "images/SIMH.jpg",
+		"audioFile": "audio/THIS-IS-US.wav",
+		"releaseDate": "2022"
+	},
+	{
+		"id": 10,
 		"title": "In Your Arms",
 		"artist": "Ellie Kerns",
 		"album": "Songs in My Head",
 		"image": "images/SIMH.jpg",
 		"audioFile": "audio/IYA.mp3",
 		"releaseDate": "2022"
-	}	
-
+	},
+	{
+		"id": 11,
+		"title": "You're the Reason",
+		"artist": "Ellie Kerns",
+		"album": "Songs in My Head",
+		"image": "images/SIMH.jpg",
+		"audioFile": "audio/Youre-The-Reason.wav",
+		"releaseDate": "2022"
+	},
+	{
+		"id": 12,
+		"title": "Bring Me to Life",
+		"artist": "Ellie Kerns",
+		"album": "Songs in My Head",
+		"image": "images/SIMH.jpg",
+		"audioFile": "audio/MBTL.wav",
+		"releaseDate": "2022"
+	},
+	{
+		"id": 13,
+		"title": "It's Getting Dark",
+		"artist": "Ellie Kerns",
+		"album": "Songs in My Head",
+		"image": "images/SIMH.jpg",
+		"audioFile": "audio/dark.wav",
+		"releaseDate": "2022"
+	},
+	{
+		"id": 14,
+		"title": "Killer",
+		"artist": "Ellie Kerns",
+		"album": "Songs in My Head",
+		"image": "images/SIMH.jpg",
+		"audioFile": "audio/killer.wav",
+		"releaseDate": "2022"
+	},
+	{
+		"id": 15,
+		"title": "Zomboi",
+		"artist": "Ellie Kerns",
+		"album": "Songs in My Head",
+		"image": "images/SIMH.jpg",
+		"audioFile": "audio/zomboi.wav",
+		"releaseDate": "2022"
+	},
+	{
+		"id": 16,
+		"title": "Happy Pride Month",
+		"artist": "Ellie Kerns",
+		"album": "Songs in My Head",
+		"image": "images/SIMH.jpg",
+		"audioFile": "audio/pride.wav",
+		"releaseDate": "2022"
+	},
+	{
+		"id": 17,
+		"title": "People Are Good",
+		"artist": "Ellie Kerns ft Jones + The Jackpines",
+		"album": "Songs in My Head",
+		"image": "images/SIMH.jpg",
+		"audioFile": "audio/People-Are-Good.wav",
+		"releaseDate": "2022"
+	},
+	{
+		"id": 18,
+		"title": "The End, For Now",
+		"artist": " Ellie Kerns ft Kailey Kerns",
+		"album": "Songs in My Head",
+		"image": "images/SIMH.jpg",
+		"audioFile": "audio/The-End.wav",
+		"releaseDate": "2022"
+	},
+	{
+		"id": 19,
+		"title": "Watch Me",
+		"artist": "Ellie Kerns",
+		"album": "Single",
+		"image": "images/watchme.jpg",
+		"audioFile": "audio/Watchme.wav",
+		"releaseDate": "2022"
+	}
 ]

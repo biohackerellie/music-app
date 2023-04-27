@@ -31,9 +31,9 @@ const MusicCard = ({ song }) => {
           onClick={handlePlay}
         >
           {isPlaying && currentSong.id === song.id ? (
-            <BsPauseCircleFill className="bg-transparent border-none outline-none focus:outline-none focus:border-none align-end"  size={75} />
+            <BsPauseCircleFill className="bg-transparent border-none outline-none focus:outline-none focus:border-none align-end"  size={50} />
           ) : (
-            <BsPlayCircleFill className="bg-transparent fill-blue-500 border-none outline-none focus:outline-none focus:border-none align-end" size={75} />
+            <BsPlayCircleFill className="bg-transparent fill-blue-500 border-none outline-none focus:outline-none focus:border-none align-end" size={50} />
           )}
         </button>
       </div>
