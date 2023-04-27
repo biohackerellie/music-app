@@ -48,7 +48,7 @@ const Player = () => {
  
 
 	return (
-    <div className="fixed bottom-0 left-0 right-0 bg-gradient-to-br from-stone-100 via-gray-400 to-stone-400 bg-opacity-50 backdrop-blur-sm h-[100px] flex items-center justify-center">
+    <div className="fixed bottom-0 left-0 right-0 bg-gradient-to-br from-stone-100 via-gray-400 to-stone-400 bg-opacity-10 backdrop-blur-sm h-[100px] flex items-center justify-center">
       <div className="flex w-full max-w-screen-xl p4 md:py-8 mx-auto justify-between bg-transparent drop-shadow-md items-center h-full px-8">
         {currentSong && (
           <>

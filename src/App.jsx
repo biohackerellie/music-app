@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { fetchSongs } from './redux/store';
 import Home from './components/home';
 import  AlbumPage  from './components/album-page';
-import Footer from './components/footer';
+
 import Player from './components/player';
 import {BrowserRouter as Router, Navigate, Route, Routes} from 'react-router-dom';
 
@@ -26,7 +26,7 @@ function App() {
 				<Route path="*" element={<Navigate to="/" />} />
 			</Routes>
     </div>
-      <div className="relative z-50">
+      <div className="relative z-50 ">
     <Player />
     </div>
     </div>
@@ -37,4 +37,4 @@ function App() {
 
 
 
-export default App
+export default App 
