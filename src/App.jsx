@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { fetchSongs } from './redux/store';
 import Home from './components/home';
 import  AlbumPage  from './components/album-page';

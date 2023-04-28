@@ -1,10 +1,7 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-import { HiChartPie, HiViewBoards, HiInbox, HiUser, HiShoppingBag, HiArrowSmRight, HiTable, HiOutlineHome, HiHome } from 'react-icons/hi';
-import { BiBuoy } from 'react-icons/bi';
-import { FaFire, FaHome,FaAmazon, FaRecordVinyl, FaSpotify, FaYoutube, FaSoundcloud, FaItunes } from 'react-icons/fa';
+import { FaHome,FaAmazon, FaRecordVinyl, FaSpotify, FaYoutube, FaSoundcloud, FaItunes } from 'react-icons/fa';
 import '../index.css'
 
 const Sidebar = () => {
