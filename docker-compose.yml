@@ -5,7 +5,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile-frontend
-    image: EPKlabs/music-app-frontend
+    image: epklabs/music-app-frontend
     container_name: music-app-frontend
     ports:
       - '3030:80'
@@ -16,7 +16,7 @@ services:
     build:
       context: ./server
       dockerfile: Dockerfile
-    image: EPKlabs/music-app-server
+    image: epklabs/music-app-server
     container_name: music-app-server
     ports:
       - '3001:3001'
