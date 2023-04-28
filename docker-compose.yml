@@ -8,7 +8,7 @@ services:
     image: EPKlabs/music-app-frontend
     container_name: music-app-frontend
     ports:
-      - '80:80'
+      - '3030:80'
     depends_on:
       - server
 
@@ -21,4 +21,4 @@ services:
     ports:
       - '3001:3001'
     volumes:
-      - /mnt/server/files:/app/public
+      - /mnt/server/db/music:/app/public

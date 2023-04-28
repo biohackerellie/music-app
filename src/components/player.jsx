@@ -91,7 +91,6 @@ const Player = () => {
               <div>{formatTime(duration)}</div>
               </div>
             </div>
-
             <div className="flex p-1 collapse sm:visible items-end justify-around">
               <FaVolumeDown className="mx-2 my-1 opacity-50" />
               <input type="range" min="0" max="1" step="0.01" value={volume || 0} onChange={handleVolumeChange} className="w-24 h-1 bg-baby rounded-full" />
