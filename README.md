@@ -1,5 +1,6 @@
 # React Musician Web App
-
+[Live Site](https://music.epklabs.com)
+![site](./Site.png)
 ## Front end made with React, Redux Toolkit, Vite, and Tailwind CSS.
 
 ## Backend made with Express and SQLite. 
