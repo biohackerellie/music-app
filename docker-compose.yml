@@ -7,6 +7,7 @@ services:
       dockerfile: Dockerfile
     image: epklabs/music-app-frontend
     container_name: music-app-frontend
+    restart: unless-stopped
     ports:
       - '3030:80'
     depends_on:
@@ -20,6 +21,7 @@ services:
       dockerfile: Dockerfile
     image: epklabs/music-app-server
     container_name: music-app-server
+    restart: unless-stopped
     ports:
       - '3001:3001'
     volumes:
