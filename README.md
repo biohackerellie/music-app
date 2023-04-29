@@ -1,11 +1,11 @@
-# React Musician Web App
+# EPKlabs Music Player
 # [Live Site](https://music.epklabs.com)
 ![site](./Site.png)
 ## Front end made with React, Redux Toolkit, Vite, and Tailwind CSS.
 
 ## Backend made with Express and SQLite. 
 
-# EPK Labs Music Player 1.0 Release Notes
+# EPKlabs Music Player 1.0 Release Notes
 
 I'm excited to announce the first official release of EPK Labs Music Player. This version includes a wide range of features designed to provide an immersive and easy-to-use music streaming experience. Here's what you can expect:
 
