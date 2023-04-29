@@ -1,13 +1,13 @@
-# EPKlabs Music Player
+# React Music App in Docker
 # [Live Site](https://music.epklabs.com)
 ![site](./Site.png)
 ## Front end made with React, Redux Toolkit, Vite, and Tailwind CSS.
 
 ## Backend made with Express and SQLite. 
 
-# EPKlabs Music Player 1.0 Release Notes
+# React Music App in Docker 1.0 Release Notes
 
-I'm excited to announce the first official release of EPK Labs Music Player. This version includes a wide range of features designed to provide an immersive and easy-to-use music streaming experience. Here's what you can expect:
+I'm excited to announce the first official release of React Music App in Docker. This version includes a wide range of features designed to provide an immersive and easy-to-use music streaming experience. Here's what you can expect:
 
 ## Music Streaming Experience
 Currently, you can listen to all of my released music. Select a track from the list list and enjoy continuous playback with minimal latency.
@@ -31,7 +31,7 @@ Improved error handling to provide a better user experience. Loading indicators 
 I've worked hard to iron out bugs and optimize performance. This version of the app provides faster load times and smoother overall operation, ensuring an uninterrupted music listening experience.
 
 ## Coming Soon: Artist Template (v1.5)
-I'm working on an update that will include a template version of the app, designed for artists to easily create their own version of the music player for their music. Stay tuned for version 1.5!
+Though everyone is free to for the repo now and start customizing, I'm working on an update that will include a template version of the app, designed for artists to easily replace the default music with their own and customize the styling. Stay tuned for version 1.5!
 
 Thanks for checking this out! I'm excited to bring you this version and look forward to your feedback.
 
