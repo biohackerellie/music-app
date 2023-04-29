@@ -1,8 +1,8 @@
 import { configureStore, createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-
+const apiUrl = import.meta.env.VITE_API_URL;
 
 export const fetchSongs = createAsyncThunk('songs/fetchSongs', async () => {
-  const response = await fetch('https://api.epklabs.com:/api/songs');
+  const response = await fetch(apiUrl+'/api/songs');
   if (!response.ok) {
     throw new Error('Error fetching songs: ' + response.statusText);
   }
@@ -51,11 +51,15 @@ const musicPlayerSlice = createSlice({
 		currentTime: 0,
 		duration: 0,
 		volume: 0.5,
+		currentSongIndex: 0,
   },
   reducers: {
     setCurrentSong: (state, action) => {
       state.currentSong = action.payload;
     },
+		setCurrentSongIndex: (state, action) => {
+			state.currentSongIndex = action.payload;
+		},
     togglePlaying: (state, play) => {
       state.isPlaying = !state.isPlaying;			
     },
@@ -73,7 +77,7 @@ const musicPlayerSlice = createSlice({
 
 });
 
-export const { setCurrentSong, togglePlaying, setCurrentTime, setDuration, setVolume } = musicPlayerSlice.actions;
+export const { setCurrentSong, setCurrentSongIndex, togglePlaying, setCurrentTime, setDuration, setVolume } = musicPlayerSlice.actions;
 
 
 const store = configureStore({

@@ -20,14 +20,15 @@ function App() {
   return(
 		<Router>
     <div  >
-      <div className="collapse sm:visible flex">
-        <Sidebar  />
+      <div className=" flex">
+        <Sidebar   />
       </div>
         <Routes>
           <Route path="/" element={<Home />}/>
           <Route path="/album/:album" element={<AlbumPage />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
+
       <div className="relative z-50 ">
         <Player />
       </div>

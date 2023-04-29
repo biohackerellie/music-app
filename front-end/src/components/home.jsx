@@ -3,6 +3,7 @@ import AlbumCard from "./album-card";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchSongs } from "../redux/store";
 import { logo } from "../assets";
+import Sidebar from "./sidebar";
 
 import { useEffect, useState } from "react";
 
@@ -35,12 +36,14 @@ const Home = () => {
 	}
 
 	return(
+
+
 		<div className="grid  sm:place-items-center min-h-screen pb-[50px]" >
-			<section className="justify-center flex flex-wrap overflow-hidden gap-4 bg-transparent drop-shadow-md relative mb-1 sm:mb-10">
+			<section className="justify-center flex flex-wrap overflow-hidden gap-4 mt-20 sm:mt-0 bg-transparent drop-shadow-md relative mb-0 sm:mb-10">
 				<h1 className="text-8xl font-bold text-center bg-transparent drop-shadow-sm  shadow-black ">Ellie Kerns Music</h1>
 				<img src={logo} alt="Ellie Kerns Music Logo" className=" h-20 w-auto bg-transparent scale-150 mt-5" />
 			</section>
-		<section className="grid grid-cols-1 scale-75 sm:scale-100 sm:grid-cols-3 gap-4 mt-0 pb-[1px] sm:pb-[150px] overflow-auto">
+		<section className="grid grid-cols-1 p-0 scale-75 sm:scale-100 sm:grid-cols-3 gap-4 mt-0 pb-[1px] sm:pb-[150px] overflow-auto">
 			{[...albums].map(album => {
 				if (album === "Single") {
 					const songsFromAlbum = songs.filter(song => song.album === album);
@@ -52,6 +55,7 @@ const Home = () => {
 			
 		</section>
 	</div>
+
 	)
 }
 
