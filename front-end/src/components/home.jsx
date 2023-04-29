@@ -3,7 +3,7 @@ import AlbumCard from "./album-card";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchSongs } from "../redux/store";
 import { logo } from "../assets";
-import Sidebar from "./sidebar";
+
 
 import { useEffect, useState } from "react";
 
@@ -36,8 +36,6 @@ const Home = () => {
 	}
 
 	return(
-
-
 		<div className="grid  sm:place-items-center min-h-screen pb-[50px]" >
 			<section className="justify-center flex flex-wrap overflow-hidden gap-4 mt-20 sm:mt-0 bg-transparent drop-shadow-md relative mb-0 sm:mb-10">
 				<h1 className="text-8xl font-bold text-center bg-transparent drop-shadow-sm  shadow-black ">Ellie Kerns Music</h1>
@@ -51,11 +49,9 @@ const Home = () => {
 				} else {
 					return <AlbumCard key={album} album={album} />;
 			}
-		})}
-			
+		})}			
 		</section>
 	</div>
-
 	)
 }
 

@@ -28,7 +28,6 @@ function App() {
           <Route path="/album/:album" element={<AlbumPage />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
-
       <div className="relative z-50 ">
         <Player />
       </div>
