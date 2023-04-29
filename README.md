@@ -31,7 +31,7 @@ Improved error handling to provide a better user experience. Loading indicators 
 I've worked hard to iron out bugs and optimize performance. This version of the app provides faster load times and smoother overall operation, ensuring an uninterrupted music listening experience.
 
 ## Coming Soon: Artist Template (v1.5)
-Though everyone is free to for the repo now and start customizing, I'm working on an update that will include a template version of the app, designed for artists to easily replace the default music with their own and customize the styling. Stay tuned for version 1.5!
+Though everyone is free to fork the repo now and start customizing, I'm working on an update that will include a template version of the app, designed for artists to easily replace the default music with their own and customize the styling. Stay tuned for version 1.5!
 
 Thanks for checking this out! I'm excited to bring you this version and look forward to your feedback.
 
