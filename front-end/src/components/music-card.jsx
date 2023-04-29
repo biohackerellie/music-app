@@ -2,6 +2,7 @@ import { BsPlayCircleFill, BsPauseCircleFill } from "react-icons/bs";
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { setCurrentSong, togglePlaying } from "../redux/store";
+const apiUrl = import.meta.env.VITE_API_URL;
 
 const MusicCard = ({ song }) => {
   const dispatch = useDispatch();
@@ -20,12 +21,12 @@ const MusicCard = ({ song }) => {
 
   return (
     <div className="bg-gray-900 shadow-xl rounded p-3 relative group">
-      <img className="w-full md:w-72 block rounded" src={`https://api.epklabs.com/songs/${song.image}`} alt="" />
+      <img className="w-full md:w-72 block rounded" src={`${apiUrl}/songs/${song.image}`} alt="" />
       <div className="p-5 bg-transparent ">
         <h3 className="text-baby drop-shadow-sm text-lg bg-transparent">{song.title}</h3>
         <p className="text-purts bg-transparent">{song.artist} • {song.releaseDate}</p>
       </div>
-      <div className="absolute bg-transparent bottom-4 right-4 opacity-0 group-hover:opacity-100 transition">
+      <div className="absolute bg-transparent bottom-4 right-4 opacity-100 sm:opacity-0  sm:group-hover:opacity-100 transition">
         <button
           
           onClick={handlePlay}

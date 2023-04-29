@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const sqlite3 = require('sqlite3').verbose();
 const cors = require('cors');
@@ -6,10 +7,12 @@ const path = require('path');
 
 const app = express();
 const port = process.env.PORT || 3001;
+const apiUrl = process.env.API_URL;
+
 
 app.use(express.json());
 app.use(cors({
-	origin: 'https://music.epklabs.com',
+	origin: process.env.API_URL || 'https://music.epklabs.com',
 	methods: "GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS"
 }));
 

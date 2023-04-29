@@ -6,8 +6,8 @@ import '../index.css'
 
 const Sidebar = () => {
   return(
-    <div className="fixed top-0 left-0 h-screen z-50 w-16 m-0
-    flex flex-col 
+    <div className=" fixed sm:fixed sm:top-0 sm:left-0 h-30 sm:h-screen w-screen  z-50 sm:w-16  sm:m-0 
+    flex flex-row sm:flex-col 
     bg-gray-900 text-white shadow-lg">
       
       <SideBarIcon icon={<FaHome size="28" />} text="Home" link="/"  />
