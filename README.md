@@ -13,7 +13,7 @@ I'm excited to announce the first official release of React Music App in Docker.
 Currently, you can listen to all of my released music. Select a track from the list list and enjoy continuous playback with minimal latency.
 
 ## Audio Player
-Our built-in audio player gives you full control over your listening experience. Play, pause, control the volume, and even see your progress through the song with our interactive progress bar.
+The custom built audio player gives you full control over your listening experience. Play, pause, control the volume, and even see your progress through the song with our interactive progress bar.
 
 ## Stunning User Interface
 Easy to browse my current selection and links to my music on other streaming platforms. Enjoy high-quality album artwork, song details, and smooth navigation.
