@@ -20,7 +20,7 @@ const MusicCard = ({ song }) => {
 
   return (
     <div className="bg-gray-900 shadow-xl rounded p-3 relative group">
-      <img className="w-full md:w-72 block rounded" src={`/api/songs/${song.image}`} alt="" />
+      <img className="w-full md:w-72 block rounded" src={`https://api.epklabs.com/songs/${song.image}`} alt="" />
       <div className="p-5 bg-transparent ">
         <h3 className="text-baby drop-shadow-sm text-lg bg-transparent">{song.title}</h3>
         <p className="text-purts bg-transparent">{song.artist} • {song.releaseDate}</p>

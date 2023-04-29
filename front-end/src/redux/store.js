@@ -2,7 +2,7 @@ import { configureStore, createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 
 
 export const fetchSongs = createAsyncThunk('songs/fetchSongs', async () => {
-  const response = await fetch('http://localhost:3001/api/songs');
+  const response = await fetch('https://api.epklabs.com:/api/songs');
   if (!response.ok) {
     throw new Error('Error fetching songs: ' + response.statusText);
   }

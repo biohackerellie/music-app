@@ -18,7 +18,7 @@ const AlbumPage = () => {
   return (
 		<div className="relative">
       {albumSongs.length > 0 && (
-		<img src={`/api/songs/${albumSongs[0].image}`} alt={album} className=" w-full h-screen object-cover absolute blur-sm  z-0" />
+		<img src={`https://api.epklabs.com/songs/${albumSongs[0].image}`} alt={album} className=" w-full h-screen object-cover absolute blur-sm  z-0" />
       )}
     <div className=" sticky grid w-screen h-screen align-middle justify-center z-10 bg-black bg-opacity-50 overflow-auto">
       <h1 className="bg-transparent text-8xl text-center drop-shadow-sm font-bold">{album}</h1>

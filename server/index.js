@@ -8,7 +8,10 @@ const app = express();
 const port = process.env.PORT || 3001;
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+	origin: 'https://music.epklabs.com',
+	methods: "GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS"
+}));
 
 const db = new sqlite3.Database(':memory:')
 
