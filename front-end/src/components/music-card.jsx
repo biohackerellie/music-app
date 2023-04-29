@@ -27,8 +27,7 @@ const MusicCard = ({ song }) => {
         <p className="text-purts bg-transparent">{song.artist} • {song.releaseDate}</p>
       </div>
       <div className="absolute bg-transparent bottom-4 right-4 opacity-100 sm:opacity-0  sm:group-hover:opacity-100 transition">
-        <button
-          
+        <button         
           onClick={handlePlay}
         >
           {isPlaying && currentSong.id === song.id ? (

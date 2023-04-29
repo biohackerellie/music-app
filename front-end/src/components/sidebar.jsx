@@ -8,8 +8,7 @@ const Sidebar = () => {
   return(
     <div className=" fixed sm:fixed sm:top-0 sm:left-0 h-30 sm:h-screen w-screen  z-50 sm:w-16  sm:m-0 
     flex flex-row sm:flex-col 
-    bg-gray-900 text-white shadow-lg">
-      
+    bg-gray-900 text-white shadow-lg">     
       <SideBarIcon icon={<FaHome size="28" />} text="Home" link="/"  />
       <SideBarIcon icon={<FaRecordVinyl size="28" />} text="Album - Songs in My Head" link="/album/Songs in My Head" />
       <SideBarIcon icon={<FaSpotify size="28" />} text="Spotify" link="https://open.spotify.com/artist/0csjx5EnVlhizAs1mwMwrW?si=e2f8G0_nRL2pd1vM7tqQhQ" />
@@ -18,7 +17,6 @@ const Sidebar = () => {
       <SideBarIcon icon={<FaYoutube size="28" />} text="YouTube" link="https://www.youtube.com/channel/UCVrCmyRUGf9KQZ7r6R8_ZeQ" />
       <SideBarIcon icon={<FaSoundcloud size="28" />} text="SoundCloud" link="https://soundcloud.com/elliekerns" />
     </div>
-
   )
 }
 
