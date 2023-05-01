@@ -160,5 +160,140 @@
 		"image": "images/watchme.jpg",
 		"audioFile": "audio/Watchme.wav",
 		"releaseDate": "2022"
+	},
+	{
+		"id": 20,
+		"title": "Let's Go Skating",
+		"artist": "Ellie Kerns",
+		"album": "Let's Go Skating",
+		"image": "images/skating.png",
+		"audioFile": "audio/skating.wav",
+		"releaseDate": "2021"
+	},
+	{
+		"id": 21,
+		"title": "All I Want",
+		"artist": "Ellie Kerns",
+		"album": "Let's Go Skating",
+		"image": "images/skating.png",
+		"audioFile": "audio/want.wav",
+		"releaseDate": "2021"
+	},
+	{
+		"id": 22,
+		"title": "Someone Like You",
+		"artist": "Ellie Kerns",
+		"album": "Let's Go Skating",
+		"image": "images/skating.png",
+		"audioFile": "audio/skating.wav",
+		"releaseDate": "2021"
+	},
+	{
+		"id": 23,
+		"title": "IDK Who I Am",
+		"artist": "Ellie Kerns ft Jon Barnea",
+		"album": "Let's Go Skating",
+		"image": "images/skating.png",
+		"audioFile": "audio/idk.mp3",
+		"releaseDate": "2021"
+	},
+	{
+		"id": 24,
+		"title": "Dreamy",
+		"artist": "Ellie Kerns",
+		"album": "Let's Go Skating",
+		"image": "images/skating.png",
+		"audioFile": "audio/dreamy.wav",
+		"releaseDate": "2021"
+	},
+	{
+		"id": 25,
+		"title": "Cactus in the Valley",
+		"artist": "Ellie Kerns ft Syd Jones",
+		"album": "Covers",
+		"image": "images/covers.jpg",
+		"audioFile": "audio/cactus.wav",
+		"releaseDate": "2020"
+	},
+	{
+		"id": 26,
+		"title": "Hold on We're Going Home",
+		"artist": "Ellie Kerns",
+		"album": "Covers",
+		"image": "images/covers.jpg",
+		"audioFile": "audio/holdon.wav",
+		"releaseDate": "2020"
+	},
+	{
+		"id": 27,
+		"title": "Passionfruit",
+		"artist": "Ellie Kerns",
+		"album": "Covers",
+		"image": "images/covers.jpg",
+		"audioFile": "audio/Passionfruit.wav",
+		"releaseDate": "2020"
+	},
+	{
+		"id": 28,
+		"title": "Catch in the Dark",
+		"artist": "Ellie Kerns",
+		"album": "Covers",
+		"image": "images/covers.jpg",
+		"audioFile": "audio/catch.wav",
+		"releaseDate": "2020"
+	},
+	{
+		"id": 29,
+		"title": "Ocean Eyes",
+		"artist": "Ellie Kerns ft Syd Jones",
+		"album": "Covers",
+		"image": "images/covers.jpg",
+		"audioFile": "audio/OE.wav",
+		"releaseDate": "2020"
+	},
+	{
+		"id": 30,
+		"title": "The Scientist",
+		"artist": "Ellie Kerns",
+		"album": "Covers",
+		"image": "images/covers.jpg",
+		"audioFile": "audio/science.mp3",
+		"releaseDate": "2020"
+	},
+	{
+		"id": 31,
+		"title": "Yellow",
+		"artist": "Ellie Kerns ft Syd Jones",
+		"album": "Covers",
+		"image": "images/covers.jpg",
+		"audioFile": "audio/Yellow.wav",
+		"releaseDate": "2020"
+	},
+	{
+		"id": 32,
+		"title": "Sorry I Love You",
+		"artist": "Ellie Kerns ft Autumn Clark",
+		"album": "Covers",
+		"image": "images/covers.jpg",
+		"audioFile": "audio/sorry.mp3",
+		"releaseDate": "2019"
+	},
+	{
+		"id": 33,
+		"title": "Am I On my Own",
+		"artist": "Ellie Kerns",
+		"album": "Single",
+		"image": "images/own.jpg",
+		"audioFile": "audio/own.mp3",
+		"releaseDate": "2018"
+	},
+	{
+		"id": 34,
+		"title": "Live Forever",
+		"artist": "Ellie Kerns ft Jon Barnea",
+		"album": "Single",
+		"image": "images/forever.jpg",
+		"audioFile": "audio/young.mp3",
+		"releaseDate": "2018"
 	}
 ]

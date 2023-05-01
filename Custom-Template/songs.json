@@ -1,0 +1,22 @@
+[
+	{
+		"id": 1,
+		"title": "title",
+		"artist": "Ellie Kerns",
+		"album": "album name",
+		"image": "images/albumArt1.jpg",
+		"audioFile": "audio/audioFile1.mp3",
+		"releaseDate": "releaseDate"
+	}, // comma after each object in the array
+	{
+		"id": 2,
+		"title": "title",
+		"artist": "Ellie Kerns",
+		"album": "Single",
+		"image": "images/albumArt2.jpg",
+		"audioFile": "audio/audioFile2.mp3",
+		"releaseDate": "releaseDate"
+	} // no comma after the last object in the array
+]
+
+// if you copied and pasted the above code, you'll need to delete the comments (//) or it will break your code
