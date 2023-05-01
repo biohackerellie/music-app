@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+
+  background: rgb(8,109,159);
+  background: radial-gradient(circle, rgba(8,109,159,1) 0%, rgba(45,6,89,1) 100%);
+}
+
+.dark {
+  background-color: #18192b;
+}
+
+* {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: dark;
+  color: rgba(255, 255, 255, 0.87);
+  
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+
+strong {
+  background-color: transparent;
+}
+
+h2 {
+  background-color: transparent;
+}
+
+primary {
+  color: #fff;
+  
+}
+
+secondary {
+  color: #8b8b8b;
+
+}
+  
+@layer components {
+
+  .sidebar-icon {
+    @apply relative flex items-center justify-center 
+      h-12 w-12 mt-2 mb-2 mx-auto shadow-lg
+      bg-dark text-puke 
+      hover:bg-puke hover:text-bubble
+      rounded-3xl hover:rounded-xl
+      transition-all duration-300 ease-linear
+      cursor-pointer;
+  }
+
+.sidebar-tooltip {
+  @apply absolute w-auto p-2 m-2 min-w-max left-14
+  rounded-md shadow-md
+  text-bubble bg-dark 
+  text-xs font-bold collapse sm:visible
+  transition-all duration-100 scale-0 origin-left;
+}
+}
