@@ -9,7 +9,7 @@ services:
     container_name: music-app-frontend
     restart: unless-stopped
     ports:
-      - '3030:80' # change to your desired port on the left side of the colon. Do not touch the right side
+      - '3030:80' # change to your desired port on the left side of the colon. Do not touch the right side, and make sure to update the port in your .env file
     depends_on:
       - server
     networks:
@@ -31,10 +31,10 @@ services:
     container_name: music-app-server
     restart: unless-stopped
     ports:
-      - '3001:3001' # change to your desired port on the left side of the colon. Do not touch the right side
-    volumes:
-      - /path/to/images:/app/public # change to your desired path on the left side of the colon. It must be in a folder called Images. Do not touch the right side
-      - /path/to/music:/app/public # change to your desired path on the left side of the colon. It must be in a folder called Music. Do not touch the right side
+      - '3001:3001' # change to your desired port on the left side of the colon. Do not touch the right side and make sure to update the port in your .env file
+    #volumes:
+      #- /path/to/images:/app/public # change to your desired path, if not using the default, on the left side of the colon. It must be in a folder called Images. Do not touch the right side
+      #- /path/to/music:/app/public # change to your desired path, if not using the default, on the left side of the colon. It must be in a folder called Music. Do not touch the right side
     networks:
       - mynetwork
     environment:
