@@ -5,7 +5,7 @@
 
 ## Backend made with Express and SQLite. 
 
-# React Music App in Docker 1.0 Release Notes
+# React Music App in Docker 1.5 Release Notes
 
 I'm excited to announce the first official release of React Music App in Docker. This version includes a wide range of features designed to provide an immersive and easy-to-use music streaming experience. Here's what you can expect:
 
@@ -24,15 +24,24 @@ Whether you're on a desktop or mobile device, my music player is designed to pro
 ## Docker Integration
 With Docker setup for both the front-end and the back-end, we ensure a consistent environment, making the app easy to launch and maintain, regardless of your operating system.
 
-## Enhanced Error Handling
-Improved error handling to provide a better user experience. Loading indicators keep you informed while your music loads, and error messages guide you when something goes wrong.
 
-## Performance Optimization
-I've worked hard to iron out bugs and optimize performance. This version of the app provides faster load times and smoother overall operation, ensuring an uninterrupted music listening experience.
+## Version 1.5 - Dockerize and Customize Your Music App
+### New Features:
 
-## Coming Soon: Artist Template (v1.5)
-Though everyone is free to fork the repo now and start customizing, I'm working on an update that will include a template version of the app, designed for artists to easily replace the default music with their own and customize the styling. Stay tuned for version 1.5!
+  - Docker Support: I've added Docker files to both the front-end and server directories to enable easier deployment of the application. This includes a Docker Compose file at the root of the repository, which allows the containers to be spun up together with a single command.
+
+  - Customization with Environment Variables: I've introduced the ability to customize various aspects of the application through environment variables. This includes the homepage title and various music streaming links (e.g., Spotify, Apple Music), as well as API URLs. This allows you to personalize the application without modifying the code.
+
+  - Single .env File: The front-end and server now pull from a single .env file at the root of the repository. This consolidates all environment variables into one place, simplifying configuration.
+
+  - Improved Documentation: I've updated the README with instructions on how to use the new Docker and environment variable features, making it easier for new users to get started with the app.
+
+Go to the Custom-Template Folder to get started! 
+
+Bug Fixes:
+
+  - Various minor bug fixes and performance improvements.
 
 Thanks for checking this out! I'm excited to bring you this version and look forward to your feedback.
 
-*Current license restrictions due to app containing my personal copywritten music. Upon Completion, template will be licensed under MIT.*
+*Live version of the app has stricter License due to copyright music, Template licensed under MIT* 
