@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import { FaHome,FaAmazon, FaRecordVinyl, FaSpotify, FaYoutube, FaSoundcloud, FaItunes } from 'react-icons/fa';
+import { FaHome,FaAmazon, FaRecordVinyl, FaSpotify, FaYoutube, FaSoundcloud, FaItunes, FaGithub} from 'react-icons/fa';
 import '../index.css'
 
 const Sidebar = () => {
@@ -16,6 +16,8 @@ const Sidebar = () => {
       <SideBarIcon icon={<FaAmazon size="28" />} text="Amazon Music" link="https://music.amazon.com/artists/B0977FBDC1/ellie-kerns" />
       <SideBarIcon icon={<FaYoutube size="28" />} text="YouTube" link="https://www.youtube.com/channel/UCVrCmyRUGf9KQZ7r6R8_ZeQ" />
       <SideBarIcon icon={<FaSoundcloud size="28" />} text="SoundCloud" link="https://soundcloud.com/elliekerns" />
+      <SideBarIcon icon={<FaGithub size="28" />} text="Github" link="https://github.com/biohackerellie/music-app" />
+
     </div>
   )
 }
