@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd /apps/music-app
+
 # Get the name of the service that has changes
 if git diff --quiet HEAD..HEAD~ -- ./server; then
   service=server
