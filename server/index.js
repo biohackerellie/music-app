@@ -44,9 +44,24 @@ app.get('/api/songs', (req, res) => {
   });
 });
 
+const expressStaticOptions = {
+  setHeaders: (res, path) => {
+    if (path.endsWith('.png')) {
+      res.setHeader('Content-Type', 'image/png');
+    } else if (path.endsWith('.mp3')) {
+      res.setHeader('Content-Type', 'audio/mpeg');
+    } else if (path.endsWith('.ogg')) {
+      res.setHeader('Content-Type', 'audio/ogg');
+    } else if (path.endsWith('.wav')) {
+      res.setHeader('Content-Type', 'audio/wav');
+    }
+  },
+};
 
-app.use('/songs/audio', express.static('public/audio'));
-app.use('/songs/images', express.static('public/images'));
+app.use('/songs/audio', express.static(path.join(__dirname, 'public', 'audio'), expressStaticOptions));
+app.use('/songs/images', express.static(path.join(__dirname, 'public', 'images'), expressStaticOptions));
+
+
 
 app.listen(port, () => {
 	console.log(`Server running on port ${port}`);
