@@ -2,7 +2,7 @@ Basic Installation Instructions:
 
 1. Clone this folder: You can download just this folder from the repo by going to [https://download-directory.github.io/](https://download-directory.github.io/) and pasting in the url of this directory: https://github.com/biohackerellie/music-app/tree/main/Custom-Template
 
-2. Create an .env File: At the root of the repository, create a new .env file. This file will store all of your environment variables. Use the provided .env.example file as a guide.
+2. Create an .env File: At the root of the repository, create a new .env file. This file will store all of your environment variables to customize the app like the Title and the sidebar links. Use the provided .env.example file as a guide.
 
 3. Place all of your music files in the /server/public/audio directory, and your album covers in the images directory. Alternatively, you can have these folders elsewhere like on a shared directory and link them with the docker compose file, check step 5 for details.
 
