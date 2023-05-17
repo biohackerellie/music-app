@@ -27,7 +27,7 @@ services:
     volumes:
       - /mnt/server/db/music:/app/public
     networks:
-      - mynetwork
+      - mynetwork 
 
 networks:
   mynetwork:
