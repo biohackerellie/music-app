@@ -1,6 +1,6 @@
 [
 	{
-		"id": 1,
+		"id": 36,
 		"title": "Makin it Up",
 		"artist": "Ellie Kerns",
 		"album": "Single",
@@ -295,5 +295,14 @@
 		"image": "images/forever.jpg",
 		"audioFile": "audio/young.mp3",
 		"releaseDate": "2018"
+	},
+	{
+		"id": 1,
+		"title": "Don't You Wanna",
+		"artist": "Ellie Kerns",
+		"album": "Single",
+		"image": "images/wanna.png",
+		"audioFile": "audio/wanna.wav",
+		"releaseDate": "2023"
 	}
 ]

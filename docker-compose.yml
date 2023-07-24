@@ -1,19 +1,19 @@
 version: '3.9'
 
 services:
-  frontend:
-    build:
-      context: ./front-end
-      dockerfile: Dockerfile
-    image: epklabs/music-app-frontend
-    container_name: music-app-frontend
-    restart: unless-stopped
-    ports:
-      - '3030:80'
-    depends_on:
-      - server
-    networks:
-      - mynetwork
+  # frontend:
+  #   build:
+  #     context: ./front-end
+  #     dockerfile: Dockerfile
+  #   image: epklabs/music-app-frontend
+  #   container_name: music-app-frontend
+  #   restart: unless-stopped
+  #   ports:
+  #     - '3030:80'
+  #   depends_on:
+  #     - server
+  #   networks:
+  #     - mynetwork
 
   server:
     build:
@@ -24,10 +24,3 @@ services:
     restart: unless-stopped
     ports:
       - '3001:3001'
-    volumes:
-      - /mnt/server/db/music:/app/public
-    networks:
-      - mynetwork
-
-networks:
-  mynetwork:
