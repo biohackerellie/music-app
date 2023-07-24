@@ -5,26 +5,25 @@ import React, { useState } from 'react';
 
 import Image from 'next/image';
 
-export default function MusicCard({ song }) {
+const MusicCard = ({ song }) => {
 	const dispatch = useDispatch();
-	const [isPlaying, setIsPlaying] = useState(false);
-	const [currentSong, setCurrentSong] = useState(null);
+	const isPlaying = useSelector((state) => state.musicPlayer.isPlaying);
+	const currentSong = useSelector((state) => state.musicPlayer.currentSong);
 
 	const handlePlay = () => {
 		if (currentSong && currentSong.id === song.id) {
-			setCurrentSong(song);
+			dispatch(togglePlaying());
 		} else {
-			setCurrentSong(song);
+			dispatch(setCurrentSong(song));
+			dispatch(togglePlaying());
 		}
 	};
 
 	return (
 		<div className='bg-gray-900 shadow-xl rounded p-3 relative group'>
 			<Image
-				className=' block rounded'
-				width='full'
-				height={288}
-				src={`api/songs/${song.image}`}
+				className='w-full md:w-72 block rounded'
+				src={`${apiUrl}/songs/${song.image}`}
 				alt=''
 			/>
 			<div className='p-5 bg-transparent '>
@@ -52,4 +51,6 @@ export default function MusicCard({ song }) {
 			</div>
 		</div>
 	);
-}
+};
+
+export default MusicCard;

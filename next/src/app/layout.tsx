@@ -1,8 +1,8 @@
 import './globals.css';
 import { Inter } from 'next/font/google';
 import { Sidebar, Player } from '@/components';
-import { Provider } from 'react-redux';
-import store from '@/redux/store';
+import ReduxProvider from '@/utils/reduxProvider';
+
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
@@ -18,11 +18,11 @@ export default function RootLayout({
 	return (
 		<html lang='en'>
 			<body className={inter.className}>
-				<Provider store={store}>
+				<ReduxProvider>
 					<Sidebar />
 					{children}
 					<Player />
-				</Provider>
+				</ReduxProvider>
 			</body>
 		</html>
 	);

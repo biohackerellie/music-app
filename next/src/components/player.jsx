@@ -14,19 +14,15 @@ import {
 } from '../redux/store';
 import { FaVolumeDown, FaVolumeUp } from 'react-icons/fa';
 
-async function fetchSongs() {
-	const res = await fetch('api/songs');
-	return res.json();
+function formatTime(timeInSeconds) {
+	const minutes = Math.floor(timeInSeconds / 60);
+	const seconds = Math.floor(timeInSeconds % 60);
+
+	const paddedSeconds = seconds < 10 ? `0${seconds}` : seconds;
+	return `${minutes}:${paddedSeconds}`;
 }
 
-export default function Player() {
-	function formatTime(timeInSeconds) {
-		const minutes = Math.floor(timeInSeconds / 60);
-		const seconds = Math.floor(timeInSeconds % 60);
-
-		const paddedSeconds = seconds < 10 ? `0${seconds}` : seconds;
-		return `${minutes}:${paddedSeconds}`;
-	}
+const Player = () => {
 	const audioRef = useRef(null);
 	const dispatch = useDispatch();
 	const { isPlaying, currentSong, currentTime, duration, volume } = useSelector(
@@ -36,6 +32,7 @@ export default function Player() {
 		(state) => state.musicPlayer.currentSongIndex
 	);
 	const songs = useSelector((state) => state.songs.list);
+
 	useEffect(() => {
 		if (isPlaying && audioRef.current) {
 			audioRef.current.play();
@@ -104,7 +101,7 @@ export default function Player() {
 					<div className=' grid-rows-1 grid grid-cols-2 sm:grid-cols-3  w-full max-w-screen-xl p4 md:py-5 mx-0  justify-items-center bg-transparent drop-shadow-md items-center h-full '>
 						<div className='flex items-left mt-5  gap-4 bg-transparent'>
 							<Image
-								src={`api/songs/${currentSong.image}`}
+								src={`${apiUrl}/songs/${currentSong.image}`}
 								alt={currentSong.title}
 								className='w-16 h-16'
 							/>
@@ -115,7 +112,7 @@ export default function Player() {
 						</div>
 						<audio
 							ref={audioRef}
-							src={`api/songs/${currentSong.audioFile}`}
+							src={`${apiUrl}/songs/${currentSong.audioFile}`}
 							preload='auto'
 							onLoadedMetadata={() =>
 								dispatch(setDuration(audioRef.current.duration))
@@ -170,4 +167,6 @@ export default function Player() {
 			)}
 		</>
 	);
-}
+};
+
+export default Player;

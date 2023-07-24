@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 
 import Link from 'next/link';
@@ -16,7 +18,7 @@ export default function Sidebar() {
 	const SideBarIcon = ({ icon, text, link }) => (
 		<Link
 			className='sidebar-icon group '
-			to={link}
+			href={link}
 		>
 			{icon}
 			<span className='sidebar-tooltip group-hover:scale-100'>{text}</span>

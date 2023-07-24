@@ -13,7 +13,7 @@ export const fetchSongs = createAsyncThunk('songs/fetchSongs', async () => {
 	return songData;
 });
 
-console.log(fetchSongs);
+console.log('songs', fetchSongs);
 
 const songsSlice = createSlice({
 	name: 'songs',
