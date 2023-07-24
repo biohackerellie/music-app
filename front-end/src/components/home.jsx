@@ -2,7 +2,7 @@ import MusicCard from './music-card';
 import AlbumCard from './album-card';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchSongs } from '../redux/store';
-import { logo } from '../../../next/src/app/assets';
+import { logo } from '../assets';
 import { useEffect, useState } from 'react';
 
 const Home = () => {
