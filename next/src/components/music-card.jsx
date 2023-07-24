@@ -1,28 +1,30 @@
-import { BsPlayCircleFill, BsPauseCircleFill } from 'react-icons/bs';
-import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { setCurrentSong, togglePlaying } from '../redux/store';
-const apiUrl = import.meta.env.VITE_API_URL;
+'use client';
 
-const MusicCard = ({ song }) => {
+import { BsPlayCircleFill, BsPauseCircleFill } from 'react-icons/bs';
+import React, { useState } from 'react';
+
+import Image from 'next/image';
+
+export default function MusicCard({ song }) {
 	const dispatch = useDispatch();
-	const isPlaying = useSelector((state) => state.musicPlayer.isPlaying);
-	const currentSong = useSelector((state) => state.musicPlayer.currentSong);
+	const [isPlaying, setIsPlaying] = useState(false);
+	const [currentSong, setCurrentSong] = useState(null);
 
 	const handlePlay = () => {
 		if (currentSong && currentSong.id === song.id) {
-			dispatch(togglePlaying());
+			setCurrentSong(song);
 		} else {
-			dispatch(setCurrentSong(song));
-			dispatch(togglePlaying());
+			setCurrentSong(song);
 		}
 	};
 
 	return (
 		<div className='bg-gray-900 shadow-xl rounded p-3 relative group'>
-			<img
-				className='w-full md:w-72 block rounded'
-				src={`${apiUrl}/songs/${song.image}`}
+			<Image
+				className=' block rounded'
+				width='full'
+				height={288}
+				src={`api/songs/${song.image}`}
 				alt=''
 			/>
 			<div className='p-5 bg-transparent '>
@@ -50,6 +52,4 @@ const MusicCard = ({ song }) => {
 			</div>
 		</div>
 	);
-};
-
-export default MusicCard;
+}
