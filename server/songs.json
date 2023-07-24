@@ -1,0 +1,308 @@
+[
+	{
+		"id": 1,
+		"title": "Makin it Up",
+		"artist": "Ellie Kerns",
+		"album": "Single",
+		"image": "images/makin.jpg",
+		"audioFile": "audio/makin.mp3",
+		"releaseDate": "2023"
+	},
+	{
+		"id": 2,
+		"title": "Getting Older",
+		"artist": "Ellie Kerns",
+		"album": "Single",
+		"image": "images/older.jpg",
+		"audioFile": "audio/older.mp3",
+		"releaseDate": "2022"
+	},
+	{
+		"id": 3,
+		"title": "Willow",
+		"artist": "Ellie Kerns",
+		"album": "Single",
+		"image": "images/willow.jpg",
+		"audioFile": "audio/willow.wav",
+		"releaseDate": "2022"
+	},
+	{
+		"id": 5,
+		"title": "Jordan Peterson",
+		"artist": "Ellie Kerns",
+		"album": "Single",
+		"image": "images/peterson.png",
+		"audioFile": "audio/peterson.wav",
+		"releaseDate": "2022"
+	},
+	{
+		"id": 6,
+		"title": "Songs in My Head",
+		"artist": "Ellie Kerns",
+		"album": "Songs in My Head",
+		"image": "images/SIMH.jpg",
+		"audioFile": "audio/Songs-in-my-Head.wav",
+		"releaseDate": "2022"
+	},
+	{
+		"id": 7,
+		"title": "You Were Never Mine",
+		"artist": "Ellie Kerns",
+		"album": "Songs in My Head",
+		"image": "images/SIMH.jpg",
+		"audioFile": "audio/You-Were-Never-Mine.wav",
+		"releaseDate": "2022"
+	},
+	{
+		"id": 8,
+		"title": "Midnight",
+		"artist": "Ellie Kerns",
+		"album": "Songs in My Head",
+		"image": "images/SIMH.jpg",
+		"audioFile": "audio/Midnight.wav",
+		"releaseDate": "2022"
+	},
+	{
+		"id": 9,
+		"title": "This is Us",
+		"artist": "Ellie Kerns ft May Zoean",
+		"album": "Songs in My Head",
+		"image": "images/SIMH.jpg",
+		"audioFile": "audio/THIS-IS-US.wav",
+		"releaseDate": "2022"
+	},
+	{
+		"id": 10,
+		"title": "In Your Arms",
+		"artist": "Ellie Kerns",
+		"album": "Songs in My Head",
+		"image": "images/SIMH.jpg",
+		"audioFile": "audio/IYA.mp3",
+		"releaseDate": "2022"
+	},
+	{
+		"id": 11,
+		"title": "You're the Reason",
+		"artist": "Ellie Kerns",
+		"album": "Songs in My Head",
+		"image": "images/SIMH.jpg",
+		"audioFile": "audio/Youre-The-Reason.wav",
+		"releaseDate": "2022"
+	},
+	{
+		"id": 12,
+		"title": "Bring Me to Life",
+		"artist": "Ellie Kerns",
+		"album": "Songs in My Head",
+		"image": "images/SIMH.jpg",
+		"audioFile": "audio/MBTL.wav",
+		"releaseDate": "2022"
+	},
+	{
+		"id": 13,
+		"title": "It's Getting Dark",
+		"artist": "Ellie Kerns",
+		"album": "Songs in My Head",
+		"image": "images/SIMH.jpg",
+		"audioFile": "audio/dark.wav",
+		"releaseDate": "2022"
+	},
+	{
+		"id": 14,
+		"title": "Killer",
+		"artist": "Ellie Kerns",
+		"album": "Songs in My Head",
+		"image": "images/SIMH.jpg",
+		"audioFile": "audio/killer.wav",
+		"releaseDate": "2022"
+	},
+	{
+		"id": 15,
+		"title": "Zomboi",
+		"artist": "Ellie Kerns",
+		"album": "Songs in My Head",
+		"image": "images/SIMH.jpg",
+		"audioFile": "audio/zomboi.wav",
+		"releaseDate": "2022"
+	},
+	{
+		"id": 16,
+		"title": "Happy Pride Month",
+		"artist": "Ellie Kerns",
+		"album": "Songs in My Head",
+		"image": "images/SIMH.jpg",
+		"audioFile": "audio/pride.wav",
+		"releaseDate": "2022"
+	},
+	{
+		"id": 17,
+		"title": "People Are Good",
+		"artist": "Ellie Kerns ft Jones + The Jackpines",
+		"album": "Songs in My Head",
+		"image": "images/SIMH.jpg",
+		"audioFile": "audio/People-Are-Good.wav",
+		"releaseDate": "2022"
+	},
+	{
+		"id": 18,
+		"title": "The End, For Now",
+		"artist": " Ellie Kerns ft Kailey Kerns",
+		"album": "Songs in My Head",
+		"image": "images/SIMH.jpg",
+		"audioFile": "audio/The-End.wav",
+		"releaseDate": "2022"
+	},
+	{
+		"id": 19,
+		"title": "Watch Me",
+		"artist": "Ellie Kerns ft Syd Jones",
+		"album": "Single",
+		"image": "images/watchme.jpg",
+		"audioFile": "audio/Watchme.wav",
+		"releaseDate": "2022"
+	},
+	{
+		"id": 20,
+		"title": "Let's Go Skating",
+		"artist": "Ellie Kerns",
+		"album": "Let's Go Skating",
+		"image": "images/skating.png",
+		"audioFile": "audio/skating.wav",
+		"releaseDate": "2021"
+	},
+	{
+		"id": 21,
+		"title": "All I Want",
+		"artist": "Ellie Kerns",
+		"album": "Let's Go Skating",
+		"image": "images/skating.png",
+		"audioFile": "audio/want.wav",
+		"releaseDate": "2021"
+	},
+	{
+		"id": 22,
+		"title": "Someone Like You",
+		"artist": "Ellie Kerns",
+		"album": "Let's Go Skating",
+		"image": "images/skating.png",
+		"audioFile": "audio/skating.wav",
+		"releaseDate": "2021"
+	},
+	{
+		"id": 23,
+		"title": "IDK Who I Am",
+		"artist": "Ellie Kerns ft Jon Barnea",
+		"album": "Let's Go Skating",
+		"image": "images/skating.png",
+		"audioFile": "audio/idk.mp3",
+		"releaseDate": "2021"
+	},
+	{
+		"id": 24,
+		"title": "Dreamy",
+		"artist": "Ellie Kerns",
+		"album": "Let's Go Skating",
+		"image": "images/skating.png",
+		"audioFile": "audio/dreamy.wav",
+		"releaseDate": "2021"
+	},
+	{
+		"id": 25,
+		"title": "Cactus in the Valley",
+		"artist": "Ellie Kerns ft Syd Jones",
+		"album": "Covers",
+		"image": "images/covers.jpg",
+		"audioFile": "audio/cactus.wav",
+		"releaseDate": "2020"
+	},
+	{
+		"id": 26,
+		"title": "Hold on We're Going Home",
+		"artist": "Ellie Kerns",
+		"album": "Covers",
+		"image": "images/covers.jpg",
+		"audioFile": "audio/holdon.wav",
+		"releaseDate": "2020"
+	},
+	{
+		"id": 27,
+		"title": "Passionfruit",
+		"artist": "Ellie Kerns",
+		"album": "Covers",
+		"image": "images/covers.jpg",
+		"audioFile": "audio/Passionfruit.wav",
+		"releaseDate": "2020"
+	},
+	{
+		"id": 28,
+		"title": "Catch in the Dark",
+		"artist": "Ellie Kerns",
+		"album": "Covers",
+		"image": "images/covers.jpg",
+		"audioFile": "audio/catch.wav",
+		"releaseDate": "2020"
+	},
+	{
+		"id": 29,
+		"title": "Ocean Eyes",
+		"artist": "Ellie Kerns ft Syd Jones",
+		"album": "Covers",
+		"image": "images/covers.jpg",
+		"audioFile": "audio/OE.wav",
+		"releaseDate": "2020"
+	},
+	{
+		"id": 30,
+		"title": "The Scientist",
+		"artist": "Ellie Kerns",
+		"album": "Covers",
+		"image": "images/covers.jpg",
+		"audioFile": "audio/science.mp3",
+		"releaseDate": "2020"
+	},
+	{
+		"id": 31,
+		"title": "Yellow",
+		"artist": "Ellie Kerns ft Syd Jones",
+		"album": "Covers",
+		"image": "images/covers.jpg",
+		"audioFile": "audio/Yellow.wav",
+		"releaseDate": "2020"
+	},
+	{
+		"id": 32,
+		"title": "Sorry I Love You",
+		"artist": "Ellie Kerns ft Autumn Clark",
+		"album": "Covers",
+		"image": "images/covers.jpg",
+		"audioFile": "audio/sorry.mp3",
+		"releaseDate": "2019"
+	},
+	{
+		"id": 33,
+		"title": "Am I On my Own",
+		"artist": "Ellie Kerns",
+		"album": "Single",
+		"image": "images/own.jpg",
+		"audioFile": "audio/own.mp3",
+		"releaseDate": "2018"
+	},
+	{
+		"id": 34,
+		"title": "Live Forever",
+		"artist": "Ellie Kerns ft Jon Barnea",
+		"album": "Single",
+		"image": "images/forever.jpg",
+		"audioFile": "audio/young.mp3",
+		"releaseDate": "2018"
+	},
+	{
+		"id": 35,
+		"title": "Don't You Wanna",
+		"artist": "Ellie Kerns",
+		"album": "Single",
+		"image": "images/wanna.jpg",
+		"audioFile": "audio/wanna.wav",
+		"releaseDate": "2023"
+	}
+]
