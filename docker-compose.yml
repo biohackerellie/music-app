@@ -22,7 +22,7 @@ services:
     image: epklabs/music-app-server
     container_name: music-app-server
     volumes:
-      - /mnt/server/db/music:/public
+      - /mnt/server/db/music:/app/public
     restart: unless-stopped
     ports:
       - '3001:3001'
