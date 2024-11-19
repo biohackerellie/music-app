@@ -1,5 +1,6 @@
+'use client'
 import { PlayCircleIcon, PauseCircleIcon, Volume1Icon, Volume2Icon} from 'lucide-react'
-import React, {useCallback, useEffect} from 'react'
+import React, { useEffect} from 'react'
 import { useMusicPlayer} from '@/lib/context'
 import {MusicPlayer} from '@/types'
 
@@ -17,7 +18,7 @@ const Player = () => {
     audioRef,
     handlePlayPause,
     handleSongEnd,
-    setPlaying, // Make sure to also include setPlaying
+    setPlaying, 
   } = useMusicPlayer();
 
   // Constructing the MusicPlayer instance
@@ -32,7 +33,7 @@ const Player = () => {
     volume,
     setVolume,
     audioRef,
-    setPlaying, // Explicitly include setPlaying
+    setPlaying, 
     handlePlayPause,
     handleSongEnd,
   });
