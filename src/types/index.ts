@@ -1,4 +1,5 @@
 import * as React from 'react';
+
 export type Song = {
   title: string;
   artist: string;
@@ -8,7 +9,7 @@ export type Song = {
   image: string;
 }
 
-
+export type metadata = Partial<Song>
 
 export interface AudioContext {
   currentSong: Song | null;

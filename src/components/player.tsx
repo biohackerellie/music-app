@@ -3,6 +3,7 @@ import { PlayCircleIcon, PauseCircleIcon, Volume1Icon, Volume2Icon} from 'lucide
 import React, { useEffect} from 'react'
 import { useMusicPlayer} from '@/lib/context'
 import {MusicPlayer} from '@/types'
+import Hls from 'hls.js'
 
 const Player = () => {
   const {
@@ -37,6 +38,26 @@ const Player = () => {
     handlePlayPause,
     handleSongEnd,
   });
+  
+  useEffect(() => {
+    if (!audioRef.current || !currentSong) return;
+    if (Hls.isSupported()) {
+      const hls = new Hls();
+      hls.loadSource(currentSong.audioFile);
+      hls.attachMedia(audioRef.current);
+
+      hls.on(Hls.Events.MANIFEST_PARSED, () => {
+        setDuration(audioRef.current?.duration || 0); 
+      })
+
+      return () => {
+        hls.destroy();
+      }
+
+    } else if (audioRef.current.canPlayType('application/vnd.apple.mpegurl')) {
+      audioRef.current.src = currentSong.audioFile;
+    }
+  }, [audioRef, currentSong, setDuration])
 
   useEffect(() => {
     if (isPlaying && audioRef.current) {
@@ -101,9 +122,7 @@ const Player = () => {
             </div>
             <audio
               ref={audioRef}
-              src={currentSong.audioFile}
               preload="auto"
-              onLoadedMetadata={() => setDuration(audioRef.current?.duration || 0)}
             />
             <div className="flex flex-col mt-5 sm:mt-0 items-center justify-center space-y-2 bg-transparent w-full">
               <button onClick={() => musicPlayer.togglePlayPause()} disabled={!currentSong}>
