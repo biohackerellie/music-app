@@ -6,7 +6,8 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prepare": "husky || true"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.2",
@@ -33,6 +34,7 @@
     "@types/react-dom": "npm:types-react-dom@rc",
     "eslint": "^9.9.0",
     "eslint-config-next": "15.0.3",
+    "husky": "^9.1.7",
     "postcss": "^8",
     "prettier": "^3.3.3",
     "tailwindcss": "^3.4.13",

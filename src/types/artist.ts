@@ -9,3 +9,9 @@ export type Artist = {
   type: 'artist'
   role: string;
 }
+
+export type ArtistMap = {
+  primary_artists: Artist[];
+  featured_artists: Artist[];
+  artists: Artist[];
+}
