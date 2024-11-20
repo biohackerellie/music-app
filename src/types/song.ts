@@ -12,6 +12,9 @@ export type Song = {
   subtitle: string;
   header_desc: string;
   type: "song";
+  year: number;
+  explicit: boolean;
+  music: string;
   url: string;
   image: Quality
   song?: string;
