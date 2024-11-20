@@ -1,9 +1,22 @@
 'use client'
-import { PlayCircleIcon, PauseCircleIcon, Volume1Icon, Volume2Icon} from 'lucide-react'
+import {
+  Loader2,
+  MoreVertical,
+  MoveUpRight,
+  Pause,
+  Repeat,
+  Repeat1,
+  Shuffle,
+  Volume,
+  Volume1,
+  Volume2,
+  VolumeX,
+} from "lucide-react";
 import React, { useEffect} from 'react'
 import { useMusicPlayer} from '@/lib/context'
 import {MusicPlayer} from '@/types'
 import Hls from 'hls.js'
+import { useGlobalAudioPlayer } from "react-use-audio-player";
 
 const Player = () => {
   const {
