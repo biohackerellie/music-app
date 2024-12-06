@@ -32,6 +32,8 @@ export type Rights = {
   reason: unknown;
 }
 
+
+
 export type Lang = "english" | "other"
 
 export type Category = "latest" | "popularity" | "alphabetical"

@@ -53,4 +53,7 @@ export function useIsPlayerInit() {
   return useAtom(isPlayingAtom, {store})
 }
 
-
+const isTyping = atom(false)
+export function useIsTyping() {
+  return useAtom(isTyping, {store})
+}

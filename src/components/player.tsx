@@ -1,4 +1,6 @@
 'use client'
+import * as React from 'react'
+import Link from 'next/link'
 import {
   Loader2,
   MoreVertical,
@@ -12,11 +14,18 @@ import {
   Volume2,
   VolumeX,
 } from "lucide-react";
-import React, { useEffect} from 'react'
-import { useMusicPlayer} from '@/lib/context'
-import {MusicPlayer} from '@/types'
-import Hls from 'hls.js'
-import { useGlobalAudioPlayer } from "react-use-audio-player";
+import { useGlobalAudioPlayer } from 'react-use-audio-player';
+
+import { useEventListener } from '@/hooks/use-event-listener';
+import { useCurrentSongIndex, useIsPlayerInit, useIsTyping, useQueue, useStreamQuality } from '@/hooks/use-store';
+import {
+  cn,
+  formatDuration,
+  getDownloadLink,
+  getImageSrc
+} from "@/lib/utils"
+import {Icons} from '@/components/icons'
+import { ImageWithFallback } from './image-fallback';
 
 const Player = () => {
   const {
