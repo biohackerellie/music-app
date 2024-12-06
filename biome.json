@@ -3,11 +3,7 @@
   "vcs": { "enabled": false, "clientKind": "git", "useIgnoreFile": false },
   "files": {
     "ignoreUnknown": true,
-    "ignore": [
-      "node_modules",
-      ".next/**",
-      "music-worker"
-    ],
+    "ignore": ["node_modules", ".next/**", "music-worker"],
     "include": ["src"]
   },
   "formatter": {

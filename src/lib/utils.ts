@@ -1,13 +1,12 @@
-import { clsx, type ClassValue } from "clsx"
-import { toast } from "sonner"
-import { twMerge } from "tailwind-merge"
-import type { ImageQuality,Quality, StreamQuality, Type } from "@/types"
-import {siteConfig} from "./site-config"
+import type { ImageQuality, Quality, StreamQuality, Type } from '@/types';
+import { type ClassValue, clsx } from 'clsx';
+import { toast } from 'sonner';
+import { twMerge } from 'tailwind-merge';
+import { siteConfig } from './site-config';
 
 export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs))
+  return twMerge(clsx(inputs));
 }
-
 
 /**
  * Returns the absolute url for the given path based on the current environment
@@ -17,19 +16,18 @@ export function cn(...inputs: ClassValue[]) {
 export function absoluteUrl(path: string) {
   if (process.env.VERCEL) {
     switch (process.env.NEXT_PUBLIC_VERCEL_ENV) {
-      case "production":
+      case 'production':
         return `${siteConfig.url}${path}`;
 
-      case "preview":
+      case 'preview':
         return `https://${process.env.NEXT_PUBLIC_VERCEL_BRANCH_URL}${path}`;
 
       default:
         // development
         return `http://localhost:${process.env.PORT ?? 3000}${path}`;
     }
-  } else {
-    return `${siteConfig.url}${path}`;
   }
+  return `${siteConfig.url}${path}`;
 }
 
 /**
@@ -38,8 +36,8 @@ export function absoluteUrl(path: string) {
  * @returns The encoded/decoded string
  */
 export const base64 = {
-  encode: (str: string) => Buffer.from(str).toString("base64"),
-  decode: (str: string) => Buffer.from(str, "base64").toString("ascii"),
+  encode: (str: string) => Buffer.from(str).toString('base64'),
+  decode: (str: string) => Buffer.from(str, 'base64').toString('ascii'),
 };
 
 /**
@@ -56,56 +54,58 @@ export function rethrow(message: string): never {
  * @param format The format to format the duration in `hh:mm:ss` or `mm:ss`
  * @returns The formatted duration
  */
-export function formatDuration(seconds: number, format: "hh:mm:ss" | "mm:ss") {
+export function formatDuration(seconds: number, format: 'hh:mm:ss' | 'mm:ss') {
   const date = new Date(seconds * 1000);
 
-  return format === "hh:mm:ss" ?
-      date.toISOString().slice(11, 19)
+  return format === 'hh:mm:ss'
+    ? date.toISOString().slice(11, 19)
     : date.toISOString().slice(14, 19);
 }
-
 
 export function getImageSrc(image: Quality, quality: ImageQuality) {
   let link;
 
-  if (typeof image === "string") {
+  if (typeof image === 'string') {
     link = image;
-  } else if (quality === "low") {
+  } else if (quality === 'low') {
     link = image[0].link;
-  } else if (quality === "medium") {
+  } else if (quality === 'medium') {
     link = image[1].link;
   } else {
     link = image[2].link;
   }
 
   // replace http with https if not present
-  return link.replace(/http:\/\//, "https://");
+  return link.replace(/http:\/\//, 'https://');
 }
 
 export function getDownloadLink(url: Quality, quality: StreamQuality) {
-  if (typeof url === "string") {
+  if (typeof url === 'string') {
     return url;
-  } else if (quality === "poor") {
-    return url[0].link;
-  } else if (quality === "low") {
-    return url[1].link;
-  } else if (quality === "medium") {
-    return url[2].link;
-  } else if (quality === "high") {
-    return url[3].link;
-  } else {
-    return url[4].link;
   }
+  if (quality === 'poor') {
+    return url[0].link;
+  }
+  if (quality === 'low') {
+    return url[1].link;
+  }
+  if (quality === 'medium') {
+    return url[2].link;
+  }
+  if (quality === 'high') {
+    return url[3].link;
+  }
+  return url[4].link;
 }
 
 export function currentlyInDev() {
-  toast.info("This feature is currently in development.", {
+  toast.info('This feature is currently in development.', {
     description: "We're working on it and it'll be available soon.",
   });
 }
 
 export function isMacOs() {
-  if (typeof window === "undefined") return false;
+  if (typeof window === 'undefined') return false;
 
-  return window.navigator.userAgent.includes("Mac");
+  return window.navigator.userAgent.includes('Mac');
 }

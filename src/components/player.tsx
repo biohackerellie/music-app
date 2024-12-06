@@ -1,6 +1,4 @@
-'use client'
-import * as React from 'react'
-import Link from 'next/link'
+'use client';
 import {
   Loader2,
   MoreVertical,
@@ -13,18 +11,21 @@ import {
   Volume1,
   Volume2,
   VolumeX,
-} from "lucide-react";
+} from 'lucide-react';
+import Link from 'next/link';
+import type * as React from 'react';
 import { useGlobalAudioPlayer } from 'react-use-audio-player';
 
+import { Icons } from '@/components/icons';
 import { useEventListener } from '@/hooks/use-event-listener';
-import { useCurrentSongIndex, useIsPlayerInit, useIsTyping, useQueue, useStreamQuality } from '@/hooks/use-store';
 import {
-  cn,
-  formatDuration,
-  getDownloadLink,
-  getImageSrc
-} from "@/lib/utils"
-import {Icons} from '@/components/icons'
+  useCurrentSongIndex,
+  useIsPlayerInit,
+  useIsTyping,
+  useQueue,
+  useStreamQuality,
+} from '@/hooks/use-store';
+import { cn, formatDuration, getDownloadLink, getImageSrc } from '@/lib/utils';
 import { ImageWithFallback } from './image-fallback';
 
 const Player = () => {
@@ -41,7 +42,7 @@ const Player = () => {
     audioRef,
     handlePlayPause,
     handleSongEnd,
-    setPlaying, 
+    setPlaying,
   } = useMusicPlayer();
 
   // Constructing the MusicPlayer instance
@@ -56,11 +57,11 @@ const Player = () => {
     volume,
     setVolume,
     audioRef,
-    setPlaying, 
+    setPlaying,
     handlePlayPause,
     handleSongEnd,
   });
-  
+
   useEffect(() => {
     if (!audioRef.current || !currentSong) return;
     if (Hls.isSupported()) {
@@ -69,17 +70,17 @@ const Player = () => {
       hls.attachMedia(audioRef.current);
 
       hls.on(Hls.Events.MANIFEST_PARSED, () => {
-        setDuration(audioRef.current?.duration || 0); 
-      })
+        setDuration(audioRef.current?.duration || 0);
+      });
 
       return () => {
         hls.destroy();
-      }
-
-    } else if (audioRef.current.canPlayType('application/vnd.apple.mpegurl')) {
+      };
+    }
+    if (audioRef.current.canPlayType('application/vnd.apple.mpegurl')) {
       audioRef.current.src = currentSong.audioFile;
     }
-  }, [audioRef, currentSong, setDuration])
+  }, [audioRef, currentSong, setDuration]);
 
   useEffect(() => {
     if (isPlaying && audioRef.current) {
@@ -101,17 +102,17 @@ const Player = () => {
 
   useEffect(() => {
     if (audioRef.current) {
-      audioRef.current.addEventListener("ended", handleSongEnd);
+      audioRef.current.addEventListener('ended', handleSongEnd);
     }
     return () => {
       if (audioRef.current) {
-        audioRef.current.removeEventListener("ended", handleSongEnd);
+        audioRef.current.removeEventListener('ended', handleSongEnd);
       }
     };
   }, [handleSongEnd, audioRef]);
 
   const handleTimeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const newTime = parseFloat(e.target.value);
+    const newTime = Number.parseFloat(e.target.value);
     setCurrentTime(newTime);
     if (audioRef.current) {
       audioRef.current.currentTime = newTime;
@@ -119,7 +120,7 @@ const Player = () => {
   };
 
   const handleVolumeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const newVolume = parseFloat(e.target.value);
+    const newVolume = Number.parseFloat(e.target.value);
     setVolume(newVolume);
     if (audioRef.current) {
       audioRef.current.volume = newVolume;
@@ -142,12 +143,12 @@ const Player = () => {
                 <p className="bg-transparent">{currentSong.artist}</p>
               </div>
             </div>
-            <audio
-              ref={audioRef}
-              preload="auto"
-            />
+            <audio ref={audioRef} preload="auto" />
             <div className="flex flex-col mt-5 sm:mt-0 items-center justify-center space-y-2 bg-transparent w-full">
-              <button onClick={() => musicPlayer.togglePlayPause()} disabled={!currentSong}>
+              <button
+                onClick={() => musicPlayer.togglePlayPause()}
+                disabled={!currentSong}
+              >
                 {isPlaying ? (
                   <PauseCircleIcon
                     className="bg-transparent border-none fill-puke outline-none"

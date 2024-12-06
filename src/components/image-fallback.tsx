@@ -1,18 +1,18 @@
 'use client';
 
-import * as React from 'react';
 import Image from 'next/image';
+import * as React from 'react';
 
-import type { ImageProps} from 'next/image';
+import type { ImageProps } from 'next/image';
 
-import { cn} from '@/lib/utils';
+import { cn } from '@/lib/utils';
 
 type ImageWithFallbackProps = ImageProps & {
-  fallback: ImageProps["src"]
-}
+  fallback: ImageProps['src'];
+};
 
 export function ImageWithFallback(props: ImageWithFallbackProps) {
-  const {fallback, alt, src, className, ...restProps } = props;
+  const { fallback, alt, src, className, ...restProps } = props;
 
   const [error, setError] = React.useState<React.SyntheticEvent<
     HTMLImageElement,
@@ -21,15 +21,15 @@ export function ImageWithFallback(props: ImageWithFallbackProps) {
 
   React.useEffect(() => {
     setError(null);
-  }, [src])
+  }, [src]);
 
   return (
-  <Image
+    <Image
       src={error ? fallback : src}
       alt={alt}
       onError={setError}
-      className={cn(className, error && "dark:invert")}
-    {...restProps}
+      className={cn(className, error && 'dark:invert')}
+      {...restProps}
     />
-  )
+  );
 }

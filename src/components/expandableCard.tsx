@@ -1,31 +1,31 @@
-"use client";
-import Image from "next/image";
-import React, { useEffect, useId, useRef, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
-import { useOutsideClick } from "@/hooks/use-outside-click";
+'use client';
+import { useOutsideClick } from '@/hooks/use-outside-click';
+import { AnimatePresence, motion } from 'framer-motion';
+import Image from 'next/image';
+import React, { useEffect, useId, useRef, useState } from 'react';
 
 export function ExpandableCard() {
   const [active, setActive] = useState<(typeof cards)[number] | boolean | null>(
-    null
+    null,
   );
   const id = useId();
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     function onKeyDown(event: KeyboardEvent) {
-      if (event.key === "Escape") {
+      if (event.key === 'Escape') {
         setActive(false);
       }
     }
 
-    if (active && typeof active === "object") {
-      document.body.style.overflow = "hidden";
+    if (active && typeof active === 'object') {
+      document.body.style.overflow = 'hidden';
     } else {
-      document.body.style.overflow = "auto";
+      document.body.style.overflow = 'auto';
     }
 
-    window.addEventListener("keydown", onKeyDown);
-    return () => window.removeEventListener("keydown", onKeyDown);
+    window.addEventListener('keydown', onKeyDown);
+    return () => window.removeEventListener('keydown', onKeyDown);
   }, [active]);
   // @ts-ignore - TS can't infer the type of the ref
   useOutsideClick(ref, () => setActive(null));
@@ -33,7 +33,7 @@ export function ExpandableCard() {
   return (
     <>
       <AnimatePresence>
-        {active && typeof active === "object" && (
+        {active && typeof active === 'object' && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -43,7 +43,7 @@ export function ExpandableCard() {
         )}
       </AnimatePresence>
       <AnimatePresence>
-        {active && typeof active === "object" ? (
+        {active && typeof active === 'object' ? (
           <div className="fixed inset-0  grid place-items-center z-[100]">
             <motion.button
               key={`button-${active.title}-${id}`}
@@ -86,7 +86,6 @@ export function ExpandableCard() {
                   <div className="">
                     <motion.h3
                       layoutId={`title-${active.title}-${id}`}
-                     
                       className="font-medium text-neutral-700 dark:text-neutral-200 text-base"
                     >
                       {active.title}
@@ -119,7 +118,7 @@ export function ExpandableCard() {
                     exit={{ opacity: 0 }}
                     className="text-neutral-600 text-xs md:text-sm lg:text-base h-40 md:h-fit pb-10 flex flex-col items-start gap-4 overflow-auto dark:text-neutral-400 [mask:linear-gradient(to_bottom,white,white,transparent)] [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
                   >
-                    {typeof active.content === "function"
+                    {typeof active.content === 'function'
                       ? active.content()
                       : active.content}
                   </motion.div>
@@ -130,7 +129,7 @@ export function ExpandableCard() {
         ) : null}
       </AnimatePresence>
       <ul className="max-w-2xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 items-start gap-4">
-        {cards.map((card, index) => (
+        {cards.map((card, _index) => (
           <motion.div
             layoutId={`card-${card.title}-${id}`}
             key={card.title}
@@ -204,11 +203,11 @@ export const CloseIcon = () => {
 
 const cards = [
   {
-    description: "Lana Del Rey",
-    title: "Summertime Sadness",
-    src: "https://assets.aceternity.com/demos/lana-del-rey.jpeg",
-    ctaText: "Visit",
-    ctaLink: "https://ui.aceternity.com/templates",
+    description: 'Lana Del Rey',
+    title: 'Summertime Sadness',
+    src: 'https://assets.aceternity.com/demos/lana-del-rey.jpeg',
+    ctaText: 'Visit',
+    ctaLink: 'https://ui.aceternity.com/templates',
     content: () => {
       return (
         <p>
@@ -227,11 +226,11 @@ const cards = [
     },
   },
   {
-    description: "Babbu Maan",
-    title: "Mitran Di Chhatri",
-    src: "https://assets.aceternity.com/demos/babbu-maan.jpeg",
-    ctaText: "Visit",
-    ctaLink: "https://ui.aceternity.com/templates",
+    description: 'Babbu Maan',
+    title: 'Mitran Di Chhatri',
+    src: 'https://assets.aceternity.com/demos/babbu-maan.jpeg',
+    ctaText: 'Visit',
+    ctaLink: 'https://ui.aceternity.com/templates',
     content: () => {
       return (
         <p>
@@ -250,11 +249,11 @@ const cards = [
   },
 
   {
-    description: "Metallica",
-    title: "For Whom The Bell Tolls",
-    src: "https://assets.aceternity.com/demos/metallica.jpeg",
-    ctaText: "Visit",
-    ctaLink: "https://ui.aceternity.com/templates",
+    description: 'Metallica',
+    title: 'For Whom The Bell Tolls',
+    src: 'https://assets.aceternity.com/demos/metallica.jpeg',
+    ctaText: 'Visit',
+    ctaLink: 'https://ui.aceternity.com/templates',
     content: () => {
       return (
         <p>
@@ -272,11 +271,11 @@ const cards = [
     },
   },
   {
-    description: "Lord Himesh",
-    title: "Aap Ka Suroor",
-    src: "https://assets.aceternity.com/demos/aap-ka-suroor.jpeg",
-    ctaText: "Visit",
-    ctaLink: "https://ui.aceternity.com/templates",
+    description: 'Lord Himesh',
+    title: 'Aap Ka Suroor',
+    src: 'https://assets.aceternity.com/demos/aap-ka-suroor.jpeg',
+    ctaText: 'Visit',
+    ctaLink: 'https://ui.aceternity.com/templates',
     content: () => {
       return (
         <p>

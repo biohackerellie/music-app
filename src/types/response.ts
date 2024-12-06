@@ -1,5 +1,5 @@
 export type CustomResponse<T> = {
-  status: "Success" | "Failed";
+  status: 'Success' | 'Failed';
   message: string;
   data?: T;
-}
+};

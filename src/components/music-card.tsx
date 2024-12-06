@@ -1,7 +1,7 @@
-'use client'
-import { PlayCircleIcon, PauseCircleIcon } from "lucide-react"
-import * as React from "react"
-import {useMusicPlayer} from "@/lib/context"
-import type {Song} from "@/types"
+'use client';
+import { useMusicPlayer } from '@/lib/context';
+import type { Song } from '@/types';
+import { PauseCircleIcon, PlayCircleIcon } from 'lucide-react';
+import * as React from 'react';
 
-const MusicCard = ({metadata}: {metadata: Song[]}) => {}
+const _MusicCard = ({ metadata }: { metadata: Song[] }) => {};
