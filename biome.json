@@ -69,7 +69,8 @@
         "useConsistentArrayType": "error",
         "useForOf": "error",
         "useShorthandFunctionType": "error",
-        "useThrowOnlyError": "error"
+        "useThrowOnlyError": "error",
+        "useConst": "off"
       },
       "suspicious": {
         "recommended": true,

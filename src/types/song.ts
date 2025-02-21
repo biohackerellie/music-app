@@ -7,25 +7,14 @@ export type SongObj = {
 };
 
 export type Song = {
-  id: string;
-  name: string;
-  subtitle: string;
-  header_desc: string;
-  type: 'song';
-  year: number;
-  explicit: boolean;
-  music: string;
-  url: string;
-  image: Quality;
-  song?: string;
+  _id: string;
+  title: string;
+  artist: string
   album: string;
-  album_id: string;
-  album_url?: string;
-  download_url: Quality;
-  duration: number;
-  rights: Rights;
-  artist_map: ArtistMap;
-  release_date?: string;
+  track: number;
+  audioFile: string;
+  image: string;
+  releaseDate: number;
 };
 
 export type SongModules = {

@@ -28,7 +28,6 @@ export type ArtistSong = Pick<
   | 'year'
   | 'explicit'
   | 'music'
-  | 'artist_map'
 > & {
   query: string;
   text: string;

@@ -18,7 +18,7 @@ export type Queue = {
   duration: number;
 };
 
-export type Type = 'artist' | 'album' | 'playlist' | 'song' | 'label';
+export type Type =  'album' | 'song' 
 
 export type Rights = {
   code: unknown;
